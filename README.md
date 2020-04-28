@@ -1,4 +1,4 @@
-A one-liner phrase describing this project or app
+barebones setup for JavaScript / Node projects replace this with a one-liner phrase describing this project or app
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/eb9ae9dbd15a489c8e1134b52a4fea67)](https://www.codacy.com/gh/BuildForSDG/javascript-starter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BuildForSDG/javascript-starter&amp;utm_campaign=Badge_Grade)
 
@@ -9,13 +9,11 @@ What is this project about. Ok to enrich here or the section above it with an im
 
 Once this repo has been setup on Codacy by the TTL, replace the above badge with the actual one from the Codacy dashboard, and add the code coverage badge as well. This is mandatory
 
-This is a simple js starter repo template for setting up your project. The setup contains
+This is a simple JavaScript starter repo template for setting up your project. The setup contains
 
-- Composer: For adding third party dependencies
+- Jest: For runnung tests. We strongly recommend that JavaScript projects use Jest
 
-- Jest: For runnung tests
-
-- Eslint: For formatting code to match javascript coding standard
+- Eslint & Prettier: For formatting code to match ESlint AirBnB coding standard. You might need to install the ESlint and Prettier plugins for your code editor to make the most of these utilities
 
 ## Why
 
@@ -27,16 +25,24 @@ Talk about what problem this solves, what SDG(s) and SGD targets it addresses an
 
 ## Setup
 
-Run `npm install` or `yarn install` to get started.
+Install `npm` or `yarn` if you dont have any of them already installed. We recommend Yarn though.
 
-`index.ts` is the entry to the project and source code should go into the `src` folder.
+After clonning the repo to your local machine and moving into the cloned folder, Run `yarn install` to get started by installing dependencies. 
 
-All tests should be written in the __tests__ folder.
+`src/index.js` is the entry to the project and source code should go into the `src` folder.
+
+All tests should be written in the `__tests__' folder. There's a sample in there.
+
+This starter uses [Parcel](https://parceljs.org/getting_started.html) as the bundler. It is much simpler that WebPack and the others
 
 #### Hints
 
-- Test: `npm run test`
-- Install dependencies: `npm install <dep name>`
+- Run `npm install` or `yarn install` to get started. We'll assume you are using Yarn.
+- Install additional dependencies: `yarn add <dependency-name> [-D]`
+- Run tests: `yarn test`
+- Run tests with test coverage info: `yarn test:cover`
+- Check the codebase for proper syntax and formatting compliance: `yarn lint`
+- Run your app in local dev mode: `yarn start`. This puts the bundled app in a `dist` folder, set up a local web server at localhost:1234, and continues to watch for your code changes which it syncs with the local server. This means if you loaded the app in a browser, it will auto-refresh as you code along. Feel free to use whatever bundler best meets your needs. Parcel was only added as a sample and for those looking for a simple but effective solution to the hassle of bundlers. 
 
 ## Authors
 
@@ -59,3 +65,4 @@ It's powerful to always give credit.
 
 ## LICENSE
 MIT
+
