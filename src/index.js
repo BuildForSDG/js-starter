@@ -1,7 +1,11 @@
-const Greetings = require('./Greetings');
+import app from './app';
 
-const name = 'BuildForSDG';
+const startApp = async () => {
+  const header = document.querySelector('[data-app-name]');
+  if (!header) return;
 
-const greetings = new Greetings(name);
+  const programName = await app();
+  header.textContent = programName;
+};
 
-console.log(greetings.sayHi());
+document.addEventListener('DOMContentLoaded', startApp);

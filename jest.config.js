@@ -1,7 +1,7 @@
 module.exports = {
   moduleFileExtensions: ['js', 'json'],
   rootDir: '__tests__',
-  testRegex: '.spec.js$',
+  testRegex: ['.spec.js$', '.test.js$'],
   coverageDirectory: './coverage',
   testEnvironment: 'node',
 };
